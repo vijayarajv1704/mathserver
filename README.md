@@ -1,33 +1,30 @@
-# Ex.05 Design a Website for Server Side Processing
-
-## AIM:
+# AIM:
 To design a website to perform mathematical calculations in server side.
 
-## DESIGN STEPS:
+# DESIGN STEPS:
+# Step 1:
+Create a new django project and app.
 
-### Step 1:
-Clone the repository from GitHub.
+# Step 2:
+Make on changes in settings and create templates folder.
 
-### Step 2:
-Create Django Admin project.
+# Step 3:
+Create a code for fronted of calculation using html and css and save it in templates.
 
-### Step 3:
-Create a New App under the Django Admin project.
+# Step 4:
+Give an url mapping an give a python code for calculating in views.
 
-### Step 4:
-Create python programs for views and urls to perform server side processing.
+# Step 5:
+Take a screenshot of the site and uploat it.
 
-### Step 5:
-Create a HTML file to implement form based input and output.
-
-### Step 6:
+# Step 6:
 Publish the website in the given URL.
 
 ## PROGRAM :
 
-### math.html
+html
 ```
-<!DOCTYPE html>
+math.html
 <html>
 <head>
 <meta charset='utf-8'>
@@ -37,13 +34,13 @@ Publish the website in the given URL.
 <style type="text/css">
 body 
 {
-background-color:cyan;
+background-color:red;
 }
 .edge {
-width: 1080px;
+width: 1440px;
 margin-left: auto;
 margin-right: auto;
-padding-top: 200px;
+padding-top: 250px;
 padding-left: 300px;
 }
 .box {
@@ -52,17 +49,17 @@ border: Thick dashed lime;
 width: 500px;
 min-height: 300px;
 font-size: 20px;
-background-color: purple;
+background-color:blue;
 }
 .formelt{
-color: Red;
+color:orange;
 text-align: center;
-margin-top: 5px;
-margin-bottom: 5px;
+margin-top: 7px;
+margin-bottom: 6px;
 }
 h1
 {
-color: yellow;
+color:rgb(255, 0, 179);
 text-align: center;
 padding-top: 20px;
 }
@@ -92,56 +89,13 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 </body>
 </html>
 ```
-### views.py
-```
-from django.shortcuts import render
-from django.template  import loader
-from django.shortcuts import render
-# Create your views here.
+
+## OUTPUT:
+![WhatsApp Image 2023-06-07 at 21 23 18](https://github.com/vijayarajv1704/mathserver/assets/121303741/224f6947-0ddc-435d-a3e3-ef8cab268d17)
+
+### Home Page:
+![WhatsApp Image 2023-06-07 at 21 23 38](https://github.com/vijayarajv1704/mathserver/assets/121303741/b1b0b65b-9b94-42bf-aa85-075823044f9e)
 
 
-
-
-def rectarea(request):
-    context={}
-    context['area'] = "0"
-    context['l'] = "0"
-    context['b'] = "0"
-    if request.method == 'POST':
-        print("POST method is used")
-        l = request.POST.get('length','0')
-        b = request.POST.get('breadth','0')
-        print('request=',request)
-        print('Length=',l)
-        print('Breadth=',b)
-        area = int(l) * int(b)
-        context['area'] = area
-        context['l'] = l
-        context['b'] = b
-        print('Area=',area)
-    return render(request,'myapp/math.html',context)
-```
-### urls.py
-```
-from django.contrib import admin
-from django.urls import path
-from myapp import views
-
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
-    path('',views.rectarea,name="areaofrectangleroot")
-]
-```
-
-## SERVER SIDE PROCESSING:
-![Screenshot 2023-06-05 193251](https://github.com/SAILESHKUMAR33/mathserver/assets/113497410/887cdf6d-fc2a-4ffa-ac48-b4af945e8944)
-
-
-## HOME PAGE:
-
-![Screenshot 2023-06-05 192950](https://github.com/SAILESHKUMAR33/mathserver/assets/113497410/740e123c-c510-4fa4-9058-9fc7bf40169f)
-
-## RESULT:
-The program for performing server side processing is completed successfully.
+## Result:
+The program to design a website to perform mathematical calculations in server side has been successfully created.
