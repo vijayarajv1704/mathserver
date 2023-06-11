@@ -91,11 +91,12 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 ```
 
 ## OUTPUT:
-![WhatsApp Image 2023-06-07 at 21 23 18](https://github.com/vijayarajv1704/mathserver/assets/121303741/224f6947-0ddc-435d-a3e3-ef8cab268d17)
+![WhatsApp Image 2023-06-11 at 13 21 48](https://github.com/vijayarajv1704/mathserver/assets/121303741/2192803f-30ff-452f-8c60-61c4751c0179)
 
 ### Home Page:
-![WhatsApp Image 2023-06-07 at 21 23 38](https://github.com/vijayarajv1704/mathserver/assets/121303741/b1b0b65b-9b94-42bf-aa85-075823044f9e)
+![WhatsApp Image 2023-06-11 at 13 22 05](https://github.com/vijayarajv1704/mathserver/assets/121303741/a86aee41-1b42-4d4e-8675-6dc53a47d0a9)
 
 
 ## Result:
+
 The program to design a website to perform mathematical calculations in server side has been successfully created.
