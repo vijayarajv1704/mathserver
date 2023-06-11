@@ -1,30 +1,25 @@
-# AIM:
+# Design a Website for Server Side Processing
+
+## AIM:
 To design a website to perform mathematical calculations in server side.
 
-# DESIGN STEPS:
-# Step 1:
-Create a new django project and app.
+## DESIGN STEPS:
 
-# Step 2:
-Make on changes in settings and create templates folder.
-
-# Step 3:
-Create a code for fronted of calculation using html and css and save it in templates.
-
-# Step 4:
-Give an url mapping an give a python code for calculating in views.
-
-# Step 5:
-Take a screenshot of the site and uploat it.
-
-# Step 6:
+### Step 1:
+Clone the repository from GitHub.
+### Step 2:
+Create Django Admin project.
+### Step 3:
+Create python programs for views and urls.
+### Step 4:
+Create python programs for views and urls.
+### Step 5:
+Create a HTML file of forms.
+### Step 6:
 Publish the website in the given URL.
-
 ## PROGRAM :
-
-html
-```
-math.html
+## math.html:
+```python
 <html>
 <head>
 <meta charset='utf-8'>
@@ -88,6 +83,39 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 </div>
 </body>
 </html>
+```
+## views.py:
+```python
+from django.shortcuts import render
+def rectarea(request):
+    context={}
+    context['area'] = "0"
+    context['l'] = "0"
+    context['b'] = "0"
+    if request.method == 'POST':
+        print("POST method is used")
+        l = request.POST.get('length','0')
+        b = request.POST.get('breadth','0')
+        print('request=',request)
+        print('Length=',l)
+        print('Breadth=',b)
+        area = int(l) * int(b)
+        context['area'] = area
+        context['l'] = l
+        context['b'] = b
+        print('Area=',area)
+    return render(request,'myapp/math.html',context)
+```
+## urls.py:
+```python
+from django.contrib import admin
+from django.urls import path
+from myapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
+    path('',views.rectarea,name="areaofrectangleroot")
+]
 ```
 
 ## OUTPUT:
